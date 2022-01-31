@@ -5,7 +5,7 @@
 using namespace std;
 
 typedef struct graph {
-    int nEdges;
+    int nEdges, nVertex;
     vector<vector<int>> vertexNeighbours;
 } graph_t;
 

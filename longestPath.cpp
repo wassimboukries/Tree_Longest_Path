@@ -7,7 +7,7 @@ int main() {
     graph_t myGraph;
 
     readGraph("inputFile.txt", myGraph);
-    BFS(graph, 0);
+    cout << BFS(myGraph, 0) << endl;
     
     return 0;
 }

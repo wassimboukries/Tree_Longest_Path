@@ -7,8 +7,13 @@ void readGraph(string fileName, graph_t & graph) {
     std::ifstream fichier(fileName);
     int neighbour;
 
-    fichier >> graph.nEdges;
+    fichier >> graph.nEdges >> graph.nVertex;
     
+    for (int i=0; i<graph.nVertex; ++i) {
+        vector<int> neigbours;
+        graph.vertexNeighbours.push_back(neigbours);
+    } 
+
     for (int i = 0; i < graph.nEdges; i++) {
         fichier >> neighbour;
         graph.vertexNeighbours[i].push_back(neighbour); 
