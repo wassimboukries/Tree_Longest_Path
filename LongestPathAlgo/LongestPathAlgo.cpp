@@ -8,8 +8,10 @@ int main()
 {
     graph_t myGraph;
 
-    readGraph("inputFile2.txt", myGraph);
-    BFS(myGraph, 0);
+    readGraph("inputFile3.txt", myGraph);
+    //BFS(myGraph, 5);
+    longestPath(myGraph);
+
 
     return 0;
 }

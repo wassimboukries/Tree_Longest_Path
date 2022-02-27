@@ -34,5 +34,8 @@
     <Text Include="inputFile2.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
+    <Text Include="inputFile3.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
   </ItemGroup>
 </Project>

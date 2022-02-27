@@ -11,3 +11,4 @@ typedef struct graph {
 
 void readGraph(string fileName, graph_t& graph);
 int BFS(graph_t& graph, int source);
+void longestPath(graph_t graph);

@@ -20,7 +20,7 @@ void readGraph(string fileName, graph_t& graph) {
         for (int j = 0; j < nbNeighbours; ++j) {
             fichier >> neighbour;
             graph.vertexNeighbours[i].push_back(neighbour);
-            graph.vertexNeighbours[neighbour].push_back(i);
+            //graph.vertexNeighbours[neighbour].push_back(i);
         }
         
     }
@@ -30,7 +30,7 @@ void readGraph(string fileName, graph_t& graph) {
 int BFS(graph_t& graph, int source) {
     vector<bool> isVertexExplored;
     queue<int> myQueue;
-    int vertex;
+    int vertex = source;
 
     for (int i = 0; i < graph.nVertex; ++i) {
         // None of the vertices is yet explored
@@ -54,4 +54,16 @@ int BFS(graph_t& graph, int source) {
     }
 
     return vertex;
+}
+
+void longestPath(graph_t graph) {
+    int firstEndPoint, secondEndPoint;
+
+    firstEndPoint = BFS(graph, 0);
+
+    cout << endl;
+
+    secondEndPoint = BFS(graph, firstEndPoint);
+
+    cout << endl << "The longest Path in the graph is from the vertex " << firstEndPoint << " to the vertex " << secondEndPoint << endl;
 }
